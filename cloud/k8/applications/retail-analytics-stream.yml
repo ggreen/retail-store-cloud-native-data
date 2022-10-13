@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run:  retail-analytics-stream
+  name:  retail-analytics-stream
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name:  retail-analytics-stream
+  template:
+    metadata:
+      labels:
+        name:  retail-analytics-stream
+    spec:
+      containers:
+        - env:
+            - name: spring.rabbitmq.host
+              value: rabbitmq
+            - name: spring_rabbitmq_username
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-default-user
+                  key: username
+            - name: spring.rabbitmq.password
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-default-user
+                  key: password
+            - name: LOCATORS
+              valueFrom:
+                configMapKeyRef:
+                  name: gemfire1-config
+                  key: locators
+            - name: jdbcUrl
+              value: jdbc:postgresql://postgres-postgresql:5432/postgres
+            - name: jdbcUsername
+              value: postgres
+            - name: jdbcPassword
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-postgresql
+                  key: postgres-password
+          image: cloudnativedata/retail-analytics-stream:0.0.4-SNAPSHOT
+          name: retail-analytics-stream
+          #          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent

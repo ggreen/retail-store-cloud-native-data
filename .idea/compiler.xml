@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="retail-analytics-migration" />
+        <module name="product-cache-service" />
+        <module name="customer-service" />
+        <module name="customer-jdbc-repository" />
+        <module name="retail-analytics-stream" />
+        <module name="retail-processor-orders-stream" />
+        <module name="retail-store-app" />
+        <module name="product-order-data-services" />
+        <module name="product-jdbc-repository" />
+        <module name="customer-cache-service" />
+      </profile>
+      <profile name="Annotation profile for retail-store-cloud-native-data-parent" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+        </processorPath>
+        <module name="retail-store-domain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="beacon-data-service" target="10" />
+      <module name="retail-analytics-data-migration" target="1.8" />
+      <module name="retail-store-api" target="10" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="beacon-data-service" options="-parameters" />
+      <module name="customer-cache-service" options="-parameters" />
+      <module name="customer-jdbc-repository" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
+      <module name="product-cache-service" options="-parameters" />
+      <module name="product-jdbc-repository" options="-parameters" />
+      <module name="product-order-data-services" options="-parameters" />
+      <module name="retail-analytics-data-migration" options="-parameters" />
+      <module name="retail-analytics-migration" options="-parameters" />
+      <module name="retail-analytics-stream" options="-parameters" />
+      <module name="retail-processor-orders-stream" options="-parameters" />
+      <module name="retail-store-api" options="-parameters" />
+      <module name="retail-store-app" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: retail-store-app-service
+spec:
+  selector:
+    run:  retail-store-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer

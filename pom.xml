@@ -1,0 +1,40 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.vmware</groupId>
+  <artifactId>retail-store-cloud-native-data-parent</artifactId>
+  <version>0.3.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+  <modules>
+    <module>components/retail-store-domain</module>
+    <module>components/customer-service</module>
+      <module>components/product-jdbc-repository</module>
+      <module>components/customer-jdbc-repository</module>
+      <module>components/customer-cache-service</module>
+      <module>components/product-cache-service</module>
+      <module>components/product-order-data-services</module>
+<!--      <module>components/beacon-data-service</module>-->
+    <module>applications/retail-store-app</module>
+    <module>applications/retail-analytics-stream</module>
+      <module>applications/retail-analytics-migration</module>
+    <module>applications/retail-processor-orders-stream</module>
+  </modules>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

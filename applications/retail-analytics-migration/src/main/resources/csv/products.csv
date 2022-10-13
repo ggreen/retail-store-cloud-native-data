@@ -1,0 +1,93 @@
+productid,productname,categoryid,cost,price
+1, Nyla Apple Juice ,1,4.99,4.99
+2, Nice Cola ,1,1.5,1.5
+3, Chateau Potomac Water ,1,1,1
+4, PBR ,1004,1.22,1.22
+5, Boone Farms Eggs ,1,3.44,3.44
+6, Sheba Smoothie,1,4.99,4.99
+7, pink cool aid ,1,0.5,0.5
+8, Banana,2,0.29,0.29
+9, pears ,2,0.39,0.39
+10, Apples,2,0.34,0.34
+11, watermelon,2,0.49,0.49
+12, Mac apple ,2,0.39,0.39
+13,Grapefruit,2,0.43,0.43
+14,Queen apple ,2,0.34,0.34
+15, Charlotte Water ,1,1,1
+16, Blue Juice,1,3.29,3.29
+17, Yellow Juice,1,1.22,1.22
+18, California navels ,2012,2.22,2.22
+19,Dole pineapple,2013,6.22,6.22
+20, Greens,3,2.55,2.55
+21, Mixed Corn,3,2.45,2.45
+22, triple wahsed spinach ,3,8.22,8.22
+23, red top turnip,3,2.22,2.22
+24, Cranberry ,2,2.22,2.22
+25, aged prunes ,2,3.33,3.33
+26,Black Chocolate Milk,3,1.22,1.22
+27, Imani Low Fat Yoghurt ,3,6.99,6.99
+28,No Frills Butter ,3,2.43,2.43
+29, Breakstone 2% Milk Cottage Cheese,3,3.21,3.21
+30, All natural Bread ,3,3.33,3.33
+31, green seedless grapes ,2,1.22,1.22
+32, Nature farm yogurt ,3,3.23,3.23
+33, red seedless grapes ,2,1.22,1.22
+34, red seeded grapes ,2,3.23,3.23
+35, Blue berries,2,3.43,3.43
+36, Tomatoes,2,7.22,7.22
+37, Strawberries,2,5.22,5.22
+38, Blackberry,2,1.34,1.34
+39, Organic banana,2,0.39,0.39
+40, Organic pears ,2,0.45,0.45
+41, Organic apples,2,0.37,0.37
+42, Organic watermelon,2,12.22,12.22
+43, Organic mac apple ,2,2.99,2.99
+44, Organic grapefruit,2,2.99,2.99
+45, Organic china apple ,2,2.99,2.99
+46, Organic california navels ,2,2.99,2.99
+47, Organic dole pineapple,2,2.99,2.99
+48, Organic Cranberries ,2,2.99,2.99
+49, Organic aged prunes ,2,1.32,1.32
+50, Organic green apple ,2,2.99,2.99
+51, Organic mac pineapple ,2,2.99,2.99
+52, Organic green seedless grapes ,2,2.99,2.99
+53, Organic green seeded grapes ,2,2.99,2.99
+54, Organic red seedless grapes ,2,5.22,5.22
+55, Organic red seeded grapes ,2,4.22,4.22
+56, Organic blue berries,2,0.56,0.56
+57, Organic Tomatoes,2,3.22,3.22
+58, Organic Strawberries,2,8.22,8.22
+59, Green Beans,3,1.22,1.22
+60, Corn,3,2.67,2.67
+61, Spinach ,3,4.22,4.22
+62, Red Top Turnip,3,3.22,3.22
+63, Josiah 2% Milk ,3,6.34,6.34
+64, Marcelle Low Fat Yoghurt ,3,1.26,1.26
+65, Land O Lakes Butter ,3,4.45,4.45
+66, Breakstone Whole Milk Cottage Cheese,3,3.67,3.67
+67,Wheat Bread ,3,3.33,3.33
+68, Nature farm pizza ,3,6.99,6.99
+69, Wonder Bread,3,5.44,5.44
+70, Brocolli Slaw ,3,1.22,1.22
+71, Peanuts ,3,11.22,11.22
+72, Almond Nuts ,3,7.22,7.22
+73, Mr Peanut Can ,3,3,3
+74, Veggie Tray ,3,9.22,9.22
+75, Tofu,3,6.22,6.22
+76, Organic Greens,3,2.99,2.99
+77, Organic Corn,3,2.99,2.99
+78, Organic Spinach ,3,7.22,7.22
+79, Organic Red Top Turnip,3,6.22,6.22
+80, Organic Imani 2% Milk ,3,2.22,2.22
+81, Organic Imani Low Fat Yoghurt ,3,3.22,3.22
+82, Organic Land O Lakes Butter ,3,4.99,4.99
+83, Organic Breakstone Whole Milk Cottage Cheese,3,4.44,4.44
+84, Organic All natural Bread ,3,4.22,4.22
+85, Organic Nature farm pizza ,3,9.33,9.33
+86, Organic Wonder Bread,3,5.55,5.55
+87, Organic Brocolli Slaw ,3,2.98,2.98
+88, Organic Peanuts ,3,9.11,9.11
+89, Organic Almond Nuts ,3,8.22,8.22
+90, Organic Mr Peanut Can ,3,9.45,9.45
+91, Organic Veggie Tray ,3,11.22,11.22
+92, Organic Tofu,3,2.23,2.23

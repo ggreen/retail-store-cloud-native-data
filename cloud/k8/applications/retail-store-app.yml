@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run:  retail-store-app
+  name:  retail-store-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name:  retail-store-app
+  template:
+    metadata:
+      labels:
+        name:  retail-store-app
+    spec:
+      containers:
+        - env:
+            - name: spring.rabbitmq.host
+              value: rabbitmq
+            - name: spring_rabbitmq_username
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-default-user
+                  key: username
+            - name: spring.rabbitmq.password
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-default-user
+                  key: password
+            - name: LOCATORS
+              valueFrom:
+                configMapKeyRef:
+                  name: gemfire1-config
+                  key: locators
+          image: cloudnativedata/retail-store-app:0.0.3
+          name: retail-store-app
+          #          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent

@@ -1,0 +1,15 @@
+gemFire:
+  locators: "localhost[10334]"
+spring:
+  application:
+    name: retail-store-app
+  cloud:
+    stream:
+      bindings:
+        orders-out-0.destination: orders
+        beaconRequests-out-0.destination: beaconRequests
+        input:
+          group: retail-store
+      binder:
+        connection-name-prefix: retail-store-app
+    function.definition: orders;beaconRequests

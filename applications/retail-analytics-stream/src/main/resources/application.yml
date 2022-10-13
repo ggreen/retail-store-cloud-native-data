@@ -1,0 +1,33 @@
+select:
+  orders: SELECT itemid, orderid, productid, quantity, productname FROM pivotalmarkets.order_items
+  #orders: SELECT orderid, customerid, storeid, orderdate FROM pivotalmarkets.orders
+server:
+  port: 0
+spring:
+  application:
+    name: retail-analytics-stream
+  cloud:
+    function.definition: orders;beaconRequests
+    stream:
+      bindings:
+        input:
+          group: retail-store
+        orders-in-0:
+          destination: orders
+          group:  retail-store
+        beaconRequests-in-0:
+          destination: beaconRequests
+          group:  retail-store
+      binder:
+        connection-name-prefix: retail-analytics-stream
+      rabbit:
+        default:
+          quorum.enabled: true
+          autoBindDlq: true
+  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource.driver-class-name: org.postgresql.Driver

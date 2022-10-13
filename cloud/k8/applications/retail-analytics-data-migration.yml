@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  labels:
+    run:  retail-analytics-data-migration
+  name:  retail-analytics-data-migration
+spec:
+  template:
+    metadata:
+      labels:
+        name:  retail-analytics-data-migration
+    spec:
+      containers:
+        - env:
+            - name: spring.datasource.url
+              value: jdbc:postgresql://postgres-postgresql:5432/postgres
+            - name: spring.datasource.username
+              value: postgres
+            - name: spring.datasource.password
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-postgresql
+                  key: postgres-password
+          image: cloudnativedata/retail-analytics-data-migration:0.0.1-SNAPSHOT
+          name: retail-analytics-data-migration
+#          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Never

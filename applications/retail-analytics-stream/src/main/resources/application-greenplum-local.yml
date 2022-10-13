@@ -1,0 +1,2 @@
+jdbcUsername : gpadmin
+jdbcUrl : jdbc:postgresql://localhost:5432/template1

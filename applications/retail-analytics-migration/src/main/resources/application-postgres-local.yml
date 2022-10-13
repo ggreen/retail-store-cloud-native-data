@@ -1,0 +1,6 @@
+jdbcUsername: pivotalmarkets
+#url: jdbc:postgresql://localhost:5432/postgres
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: pivotalmarkets

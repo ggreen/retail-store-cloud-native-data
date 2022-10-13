@@ -1,0 +1,12 @@
+create lucene index --region=products --name=productIndex --field=productName
+create region --name=products --type=PARTITION --skip-if-exists=true
+create region  --type=PARTITION --name=customerPromotions --skip-if-exists=true
+create region  --type=PARTITION --name=customerFavorites --skip-if-exists=true
+create region  --type=PARTITION --name=alerts --skip-if-exists=true
+create region  --type=PARTITION --name=users --skip-if-exists=true
+create region  --type=PARTITION --name=beaconProducts --skip-if-exists=true
+create region  --type=PARTITION --name=beaconPromotions --skip-if-exists=true
+create region  --type=PARTITION --name=customerLocation --skip-if-exists=true
+create region  --type=PARTITION --name=productAssociations --skip-if-exists=true
+create region  --type=PARTITION --name=products --skip-if-exists=true
+deploy --dir=/Users/Projects/solutions/cloudNativeData/showCase/dev/retail-store-cloud-native-data/applications/libs
